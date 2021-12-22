@@ -1,0 +1,7 @@
+<o-form attr="stockexample" service="stock" entity="stockName" keys="ID">
+  <o-combo attr="sector" service="stock" entity="stockSector" keys="ID" columns="ID;STOCK_SECTOR"
+    visible-columns="STOCK_SECTOR" value-column="ID" required="yes"></o-combo>
+  <o-combo attr="company" service="stock" entity="stockName" keys="ID" columns="ID;ID_STOCK_SECTOR;STOCK_NAME"
+    visible-columns="STOCK_NAME" value-column="STOCK_NAME" required="yes" parent-keys="ID_STOCK_SECTOR:sector[ID]">
+  </o-combo>
+</o-form>
